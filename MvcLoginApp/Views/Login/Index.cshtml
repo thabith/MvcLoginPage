@@ -1,0 +1,37 @@
+﻿@model MvcLoginApp.Models.LoginModel
+
+<body id="section">
+    @{
+        ViewBag.Title = "Login";
+    }
+
+    <h2>Login</h2>
+
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.LabelFor(m => m.Username)
+            <br />
+            @Html.TextBoxFor(m => m.Username)
+            <br />
+            <br />
+            @Html.LabelFor(m => m.Password)
+            <br />
+            @Html.PasswordFor(m => m.Password)
+            <br />
+            <br />
+            <input input type="submit" value="Submit" />
+            @Html.ValidationSummary()
+        }
+    </div>
+</body>
+
+<style>
+    #section {
+        background-color: #cccccc;
+        font-size: large;
+        font-weight: bold;
+        font-style: oblique;
+        text-align: center;
+    }
+</style>
